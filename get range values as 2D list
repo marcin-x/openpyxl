@@ -1,0 +1,15 @@
+import openpyxl
+
+wb = openpyxl.load_workbook(file)
+sheet = wb['sheet1']
+range = sheet['A1:C3']
+
+def get_range_values(range):
+    """returns values from the range as 2D list by iterating through the rows (all?) of the file"""
+
+    list = []
+
+    for row in sheet.rows:
+        list.append( [cell.value for cell in row] )
+
+    return list
