@@ -1,0 +1,9 @@
+def get_sheet_values(sheet):
+    """returns Excel sheet values as 2D list"""
+
+    values = []
+
+    for row in sheet.rows:
+        values.append( [cell.value for cell in row] )
+
+    return values
