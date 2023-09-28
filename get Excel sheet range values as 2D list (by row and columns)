@@ -1,0 +1,12 @@
+def get_range_values(sheet, min_col, min_row, max_col, max_row):
+    """returns Excel sheet range values as 2D list"""
+
+    values = []
+
+    for row in sheet.iter_rows(min_col=min_col,
+                               min_row=min_row,
+                               max_col=max_col,
+                               max_row=max_row):
+        values.append( [cell.value for cell in row] )
+
+    return values
