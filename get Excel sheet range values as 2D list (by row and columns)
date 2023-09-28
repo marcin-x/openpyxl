@@ -1,5 +1,17 @@
 def get_range_values(sheet, min_col, min_row, max_col, max_row):
-    """returns Excel sheet range values as 2D list"""
+    """
+    Returns Excel sheet range values as 2D list.
+
+    Parameters:
+        sheet (obj): sheet object of Excel file
+        min_col (int): range start column number
+        min_row (int): range start row number
+        max_col (int): range end column number
+        max_row (int): range end row number
+
+    Returns:
+        values (list): defined range values
+    """
 
     values = []
 
